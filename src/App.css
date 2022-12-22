@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+.formContainer {
+  width: 340px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.formContainer form {
+  width: 340px;
+  margin: 50px auto;
+}
+.field_box {
+  position: relative;
+  /* margin: 2rem auto; */
+  margin-top: 2rem;
+}
+.input_field{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 12px;
+
+}
+.country_input {
+}
+.input_field input {
+  width: 100%;
+  border: none;
+  padding: 0;
+  font-size: 18px;
+}
+.input_field input:focus {
+  outline: none;
+}
+.input_field:focus-within {
+  border-color: blue;
+}
+.input_label {
+  position: absolute;
+  /* top: 14px; */
+  top: -12px;
+  bottom: 0;
+  left: 20px;
+  color: gray;
+  background-color: #fff;
+  padding: 0 8px;
+  height: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.arrowIcon_wrapper {
+  position: relative;
+}
+.arrowIcon {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  transition: transform 0.2s ease-in-out;
+}
+.country_input:focus-within .arrowIcon {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in-out;
+  top: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.countryList_wrapper {
+  --countryListHeigh: 320px;
+  position: absolute;
+  z-index: 2;
+  top: 70px;
+  background-color: #fff;
+  width: 100%;
+  max-height: var(
+    --countryListHeigh
+  ); /*give it's height when the input on focus*/
+  overflow: hidden;
+  /* box-shadow: 0 0 20px 1px gray; */
+  box-shadow: 0 5px 15px 1px gray;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.countryList {
+  height: 350px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.countryList:hover {
+  scrollbar-color: lightgrey #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.countryList::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+.countryList::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.countryList:hover::-webkit-scrollbar-thumb {
+  background: lightgray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.field_box:focus-within .countryList_wrapper {
+  max-height: 320px;
+  /* --countryListHeigh: 320px; */
+}
+
+.country {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  padding: 1rem 1rem;
+}
+.country:hover {
+  background-color: rgb(241, 241, 241);
+  cursor: pointer;
+}
+.phone_code {
+  color: grey;
+}
+
+
+.keepsign_check{
+   margin: 20px 12px;
+    
+}
+.keepsign_check input{
+    margin-right: 15px;
+}
+
+.btn{
+    border: none;
+    display: block;
+    padding: 12px 12px;
+    width: 100%;
+    margin: 8px auto;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.next_btn{
+    background-color: #3390ec;
+    color: white;
+}
+.next_btn:hover{
+    background-color: #1179e0;
+    color: white;
+}
+.qr_btn{
+    background-color: transparent;
+    color: #3390ec;
+}
+.qr_btn:hover{
+    background-color: rgb(234, 247, 253);
 }
