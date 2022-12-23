@@ -43,7 +43,7 @@ const PhoneNumberForm = () => {
         setCountries(data?.data?.countries);
         setfilteredCountries(data?.data?.countries);
         setCountry(data?.data?.countries[0]);
-        setPhone(`+${data?.data?.countries[0].phone}`);
+        setPhone(`+${data?.data?.countries[0].phone} `);
       })
       .catch((err) => {
         console.log(err);
@@ -75,14 +75,7 @@ const PhoneNumberForm = () => {
   }
   
   
-  const onKeyPressPhoneHandler = (e: React.KeyboardEvent<HTMLInputElement>) =>{
-    if (e.key !== 'Backspace' && (phone.length === 3 || phone.length === 7)){
-        // setPhone(phone+'-');
-        setPhone(phone+' ');
-        setPhoneErr("");
-    }
-  }
-
+ 
   const phoneNumberBlurHandler = async() =>{
     const phoneValidateRegex = /^\+[1-9]\d{1,14}$/;
     
@@ -168,7 +161,6 @@ const PhoneNumberForm = () => {
                 <label className="input_label" style={{fontSize:"14px"}}>Phone Number</label>
                     <input
                         type="tel"
-                        onKeyDown={onKeyPressPhoneHandler}
                         onChange={onChangePhoneHandler}
                         onBlur={phoneNumberBlurHandler}
                         value={phone}
