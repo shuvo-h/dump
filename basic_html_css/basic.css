@@ -1,0 +1,21 @@
+#father{
+    color:blueviolet;
+    font-size: 30px;
+}
+.my_father{
+    color:blueviolet;
+    font-size: 30px;
+}
+#my_family{
+    text-decoration: underline;
+    /* color:rgb(101, 226, 43); */
+}
+.my_family{
+    color:blueviolet;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.languges{
+    color:aqua;
+    border: 3px dashed green;
+}

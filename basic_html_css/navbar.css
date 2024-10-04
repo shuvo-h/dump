@@ -1,0 +1,39 @@
+.nav_container{
+    background-color: rgb(9, 103, 141);
+    color: white;
+    padding: 20px;
+}
+.logo{
+    display: inline-block;
+}
+
+.items_container{
+    display: inline-block;
+    width: 700px;
+}
+.items{
+    display: block;
+    width: 300px;
+    margin: auto;
+}
+.item{
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.btns{
+    display: inline-block;
+}
+/*
+.nav_container{
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+}
+.items{
+    display: flex;
+    gap: 20px;
+}
+.item{
+    list-style: none;
+}
+*/
