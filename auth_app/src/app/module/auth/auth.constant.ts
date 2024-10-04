@@ -1,4 +1,0 @@
-export const COOKIES_INFO = {
-  MAX_AGE_ACCESS_TOKEN_MINUTE: 30, // 30 minutes
-  MAX_AGE_REFRESH_TOKEN_MINUTE: 24 * 60, // 1d
-}
