@@ -90,3 +90,37 @@ footer{
     transition: all 0.5s ease-in-out;
     font-size: 22px;
 }
+
+
+
+.container{
+    /* border: 1px solid black; */
+    margin: 30px 10% 0px 10%;
+}
+.section-title{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.products{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.product{
+    border: 1px solid black;
+    display: flex;
+    gap: 1em;
+}
+
+.product img{
+    width: 120px;
+}
+
+.product .title, .price span{
+    font-size: 15px;
+}
+/* .product .price span{
+    font-size: 15px;
+} */
