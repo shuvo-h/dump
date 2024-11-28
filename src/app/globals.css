@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 p, span, li, a, div {
     /* @apply font-inter; */
 }
-@layer base {
+/* @layer base {
   :root {
         --sidebar-background: 0 0% 98%;
         --sidebar-foreground: 240 5.3% 26.1%;
@@ -50,4 +50,4 @@ p, span, li, a, div {
         --sidebar-border: 240 3.7% 15.9%;
         --sidebar-ring: 217.2 91.2% 59.8%
     }
-}
+} */

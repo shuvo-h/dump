@@ -1,6 +1,12 @@
 export const FONT_SIZE = {
     // head1: '100px',
-    // head2: '82px',
+    head3: '16px',
+    para1: "14px",
+    para2: "13px",
+    para3: "12px",
+    para4: "11px",
+    side_bar_mainitem: '14px',
+    side_bar_subitem: '12px',
 }
 export const LINE_HEIGHT = {
     // head1: '120%',

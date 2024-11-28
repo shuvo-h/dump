@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import { BACKGROUND_COLOR, BORDER_COLOR, COLORS } from "./theme/color";
 import { FONT_SIZE, LETTER_SPACING, LINE_HEIGHT } from "./theme/font";
+const { fontFamily } = require("tailwindcss/defaultTheme")
 
 const config: Config = {
     darkMode: ["class"],
@@ -14,6 +15,7 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
+			...COLORS,
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',
@@ -27,9 +29,14 @@ const config: Config = {
   		},
   		backgroundColor: BACKGROUND_COLOR,
   		borderColor: BORDER_COLOR,
+
   		fontSize: FONT_SIZE,
   		lineHeight: LINE_HEIGHT,
   		letterSpacing: LETTER_SPACING,
+		fontFamily: {
+			inter: ['var(--font-inter)', ...fontFamily.sans],
+			roboto: ['var(--font-roboto)', ...fontFamily.sans],
+		},
   		borderWidth: {
   			'1': '1px',
   			'3': '3px',
